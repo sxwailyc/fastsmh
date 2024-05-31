@@ -21,8 +21,33 @@
 
 ![image](fastsmh.png)
 
+##### 二. 使用方法
 
-#### 二. 常见问题
+```
+usage: fastsmh [-h] [--num-units] [--nonces] [-d DIR [DIR ...]] [-v]
+
+This script is for fastsmh runner.
+
+options:
+  -h, --help            show this help message and exit 
+  --num-units           numUnits, default is 32  #指定 numUnits, 其实就是指定图大小, 一个numUnits为32G, 比如一个1T的图,这里就指定 16, 默认值为32
+  --nonces              nonces, default is 288   #指定 nonces, 最大值为 288, 这个值越大，扫盘的难度越大，但同时成功率也最高，默认值为 288
+  -d DIR [DIR ...], --dir DIR [DIR ...]          #指定图的保存路径，可以指定多个 比如: ./fastsmh -d /mnt/sda -d /mnt/sdb
+                        plot dirs
+  -v, --version         show version
+```
+
+###### 如:
+```
+mkdir -p /data/fastsmh
+cd /data/fastsmh
+wget https://github.com/sxwailyc/fastsmh/releases/download/v0.3/fastsmh
+chmod +x fastsmh
+#/mnt/sdb 改为您的路径
+./fastsmh -d /mnt/sdb   
+```
+
+#### 三. 常见问题
 
 
 ##### 1. 本软件收费吗?
@@ -55,7 +80,7 @@ samba共享目录为 /mnt
 
 
 
-#### 三. 如何购买
+#### 四. 如何购买
 
 ###### 可以添加客服微信购买或者申请试用
 
