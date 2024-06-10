@@ -22,6 +22,11 @@
 ##### 二. 使用方法
 
 ```
+#安装依赖
+apt install libgomp1 ocl-icd-opencl-dev -y
+```
+
+```
 usage: fastsmh [-h] [--num-units] [--nonces] [-d DIR [DIR ...]] [-v]
 
 This script is for fastsmh runner.
