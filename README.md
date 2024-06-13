@@ -12,17 +12,46 @@
 | 3070    | 2.51    | 3.81    | 50%    |
 | 3060    | 2    | 2.6    | 33.5%    |
 | 3080    | 2.9    | 4.9  | 68.9%    |
+| 3080TI    | 3.5    | 6.4  | 82.8%    |
 | 3090    | 4.0    | 6.9    | 72.5%    |
-| 50HX    | 2    | 3.4    | 70%    |
-| 40HX    | 1.3   | 2.7    | 107%    |
-| P102    |     | 1.25    | -    |
-
+| 40HX    | 1.6    | 2.6    | 72.5%    |
 ##### 3. 运行效果
 
 ![image](fastsmh.png)
 
+##### 二. 使用方法
 
-#### 二. 常见问题
+```
+#安装依赖
+apt install libgomp1 ocl-icd-opencl-dev -y
+```
+
+```
+usage: fastsmh [-h] [--num-units] [--nonces] [-d DIR [DIR ...]] [-v]
+
+This script is for fastsmh runner.
+
+options:
+  -h, --help            show this help message and exit 
+  --num-units           numUnits, default is 32  #指定 numUnits, 其实就是指定图大小, 一个numUnits为32G, 比如一个1T的图,这里就指定 16, 默认值为32
+  --max-filesize        maxFileSize, default is 32 #单图大小,默认是32, 单位是G
+  --reserved-size       reserved size, default is 0 #磁盘预留空间，默认是P满意，单位为G
+  -d DIR [DIR ...], --dir DIR [DIR ...]          #指定图的保存路径，可以指定多个 比如: ./fastsmh -d /mnt/sda -d /mnt/sdb
+                        plot dirs
+  -v, --version         show version
+```
+
+###### 如:
+```
+mkdir -p /data/fastsmh
+cd /data/fastsmh
+wget https://github.com/sxwailyc/fastsmh/releases/download/v0.3/fastsmh
+chmod +x fastsmh
+#/mnt/sdb 改为您的路径
+./fastsmh -d /mnt/sdb   
+```
+
+#### 三. 常见问题
 
 
 ##### 1. 本软件收费吗?
@@ -55,7 +84,7 @@ samba共享目录为 /mnt
 
 
 
-#### 三. 如何购买
+#### 四. 如何购买
 
 ###### 可以添加客服微信购买或者申请试用
 
