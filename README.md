@@ -14,7 +14,7 @@
 | 3080    | 2.9    | 4.9  | 68.9%    |
 | 3080TI    | 3.5    | 6.4  | 82.8%    |
 | 3090    | 4.0    | 6.9    | 72.5%    |
-
+| 40HX    | 1.6    | 2.6    | 72.5%    |
 ##### 3. 运行效果
 
 ![image](fastsmh.png)
@@ -34,7 +34,8 @@ This script is for fastsmh runner.
 options:
   -h, --help            show this help message and exit 
   --num-units           numUnits, default is 32  #指定 numUnits, 其实就是指定图大小, 一个numUnits为32G, 比如一个1T的图,这里就指定 16, 默认值为32
-  --nonces              nonces, default is 288   #指定 nonces, 最大值为 288, 这个值越大，扫盘的难度越大，但同时成功率也最高，默认值为 288
+  --max-filesize        maxFileSize, default is 32 #单图大小,默认是32, 单位是G
+  --reserved-size       reserved size, default is 0 #磁盘预留空间，默认是P满意，单位为G
   -d DIR [DIR ...], --dir DIR [DIR ...]          #指定图的保存路径，可以指定多个 比如: ./fastsmh -d /mnt/sda -d /mnt/sdb
                         plot dirs
   -v, --version         show version
