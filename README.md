@@ -45,7 +45,7 @@ options:
 ```
 mkdir -p /data/fastsmh
 cd /data/fastsmh
-wget https://github.com/sxwailyc/fastsmh/releases/download/v0.3/fastsmh
+wget https://github.com/sxwailyc/fastsmh/releases/download/v0.7/fastsmh
 chmod +x fastsmh
 #/mnt/sdb 改为您的路径
 ./fastsmh -d /mnt/sdb   
